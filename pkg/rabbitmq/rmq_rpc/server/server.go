@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/evrone/go-clean-template/pkg/logger"
-	rmqrpc "github.com/evrone/go-clean-template/pkg/rabbitmq/rmq_rpc"
+	"github.com/dorozhkoanton/battletoads/pkg/logger"
+	rmqrpc "github.com/dorozhkoanton/battletoads/pkg/rabbitmq/rmq_rpc"
 	"github.com/goccy/go-json"
 	amqp "github.com/rabbitmq/amqp091-go"
 )

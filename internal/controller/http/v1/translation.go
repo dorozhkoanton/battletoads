@@ -3,9 +3,9 @@ package v1
 import (
 	"net/http"
 
-	"github.com/evrone/go-clean-template/internal/entity"
-	"github.com/evrone/go-clean-template/internal/usecase"
-	"github.com/evrone/go-clean-template/pkg/logger"
+	"github.com/dorozhkoanton/battletoads/internal/entity"
+	"github.com/dorozhkoanton/battletoads/internal/usecase"
+	"github.com/dorozhkoanton/battletoads/pkg/logger"
 	"github.com/go-playground/validator/v10"
 	"github.com/gofiber/fiber/v2"
 )

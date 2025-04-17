@@ -7,16 +7,16 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/evrone/go-clean-template/config"
-	amqprpc "github.com/evrone/go-clean-template/internal/controller/amqp_rpc"
-	v1 "github.com/evrone/go-clean-template/internal/controller/http"
-	"github.com/evrone/go-clean-template/internal/repo/persistent"
-	"github.com/evrone/go-clean-template/internal/repo/webapi"
-	"github.com/evrone/go-clean-template/internal/usecase/translation"
-	"github.com/evrone/go-clean-template/pkg/httpserver"
-	"github.com/evrone/go-clean-template/pkg/logger"
-	"github.com/evrone/go-clean-template/pkg/postgres"
-	"github.com/evrone/go-clean-template/pkg/rabbitmq/rmq_rpc/server"
+	"github.com/dorozhkoanton/battletoads/config"
+	amqprpc "github.com/dorozhkoanton/battletoads/internal/controller/amqp_rpc"
+	v1 "github.com/dorozhkoanton/battletoads/internal/controller/http"
+	"github.com/dorozhkoanton/battletoads/internal/repo/persistent"
+	"github.com/dorozhkoanton/battletoads/internal/repo/webapi"
+	"github.com/dorozhkoanton/battletoads/internal/usecase/translation"
+	"github.com/dorozhkoanton/battletoads/pkg/httpserver"
+	"github.com/dorozhkoanton/battletoads/pkg/logger"
+	"github.com/dorozhkoanton/battletoads/pkg/postgres"
+	"github.com/dorozhkoanton/battletoads/pkg/rabbitmq/rmq_rpc/server"
 )
 
 // Run creates objects via constructors.

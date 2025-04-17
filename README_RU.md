@@ -4,10 +4,10 @@
 
 Шаблон Чистой Архитектурой для приложений на Golang
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/evrone/go-clean-template)](https://goreportcard.com/report/github.com/evrone/go-clean-template)
-[![License](https://img.shields.io/github/license/evrone/go-clean-template.svg)](https://github.com/evrone/go-clean-template/blob/master/LICENSE)
-[![Release](https://img.shields.io/github/v/release/evrone/go-clean-template.svg)](https://github.com/evrone/go-clean-template/releases/)
-[![codecov](https://codecov.io/gh/evrone/go-clean-template/branch/master/graph/badge.svg?token=XE3E0X3EVQ)](https://codecov.io/gh/evrone/go-clean-template)
+[![Go Report Card](https://goreportcard.com/badge/github.com/dorozhkoanton/battletoads)](https://goreportcard.com/report/github.com/dorozhkoanton/battletoads)
+[![License](https://img.shields.io/github/license/dorozhkoanton/battletoads.svg)](https://github.com/dorozhkoanton/battletoads/blob/master/LICENSE)
+[![Release](https://img.shields.io/github/v/release/dorozhkoanton/battletoads.svg)](https://github.com/dorozhkoanton/battletoads/releases/)
+[![codecov](https://codecov.io/gh/dorozhkoanton/battletoads/branch/master/graph/badge.svg?token=XE3E0X3EVQ)](https://codecov.io/gh/dorozhkoanton/battletoads)
 
 ## Обзор
 
@@ -17,8 +17,8 @@
 - где хранить бизнес-логику, что бы она оставалась независимой, чистой и расширяемой
 - как не потерять контроль при росте проекта
 
-[Go-clean-template](https://evrone.com/go-clean-template?utm_source=github&utm_campaign=go-clean-template) создан и
-поддерживается [Evrone](https://evrone.com/?utm_source=github&utm_campaign=go-clean-template).
+[battletoads](https://dorozhkoanton.com/battletoads?utm_source=github&utm_campaign=battletoads) создан и
+поддерживается [dorozhkoanton](https://dorozhkoanton.com/?utm_source=github&utm_campaign=battletoads).
 
 ## Содержание
 
@@ -48,7 +48,7 @@ make compose-up-integration-test
 ### Весь docker stack с reverse proxy
 
 ```sh
-make compose-up-all 
+make compose-up-all
 ```
 
 Проверьте URL-адреса:

@@ -4,7 +4,7 @@ package repo
 import (
 	"context"
 
-	"github.com/evrone/go-clean-template/internal/entity"
+	"github.com/dorozhkoanton/battletoads/internal/entity"
 )
 
 //go:generate mockgen -source=contracts.go -destination=../usecase/mocks_repo_test.go -package=usecase_test

@@ -7,10 +7,10 @@
 
 Clean Architecture template for Golang services
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/evrone/go-clean-template)](https://goreportcard.com/report/github.com/evrone/go-clean-template)
-[![License](https://img.shields.io/github/license/evrone/go-clean-template.svg)](https://github.com/evrone/go-clean-template/blob/master/LICENSE)
-[![Release](https://img.shields.io/github/v/release/evrone/go-clean-template.svg)](https://github.com/evrone/go-clean-template/releases/)
-[![codecov](https://codecov.io/gh/evrone/go-clean-template/branch/master/graph/badge.svg?token=XE3E0X3EVQ)](https://codecov.io/gh/evrone/go-clean-template)
+[![Go Report Card](https://goreportcard.com/badge/github.com/dorozhkoanton/battletoads)](https://goreportcard.com/report/github.com/dorozhkoanton/battletoads)
+[![License](https://img.shields.io/github/license/dorozhkoanton/battletoads.svg)](https://github.com/dorozhkoanton/battletoads/blob/master/LICENSE)
+[![Release](https://img.shields.io/github/v/release/dorozhkoanton/battletoads.svg)](https://github.com/dorozhkoanton/battletoads/releases/)
+[![codecov](https://codecov.io/gh/dorozhkoanton/battletoads/branch/master/graph/badge.svg?token=XE3E0X3EVQ)](https://codecov.io/gh/dorozhkoanton/battletoads)
 
 ## Overview
 
@@ -22,8 +22,8 @@ The purpose of the template is to show:
 
 Using the principles of Robert Martin (aka Uncle Bob).
 
-[Go-clean-template](https://evrone.com/go-clean-template?utm_source=github&utm_campaign=go-clean-template) is created &
-supported by [Evrone](https://evrone.com/?utm_source=github&utm_campaign=go-clean-template).
+[battletoads](https://dorozhkoanton.com/battletoads?utm_source=github&utm_campaign=battletoads) is created &
+supported by [dorozhkoanton](https://dorozhkoanton.com/?utm_source=github&utm_campaign=battletoads).
 
 ## Content
 
@@ -53,7 +53,7 @@ make compose-up-integration-test
 ### Full docker stack with reverse proxy
 
 ```sh
-make compose-up-all 
+make compose-up-all
 ```
 
 Check URL's:
@@ -73,9 +73,9 @@ Configuration and logger initialization. Then the main function "continues" in
 
 ### `config`
 
-The twelve-factor app stores config in environment variables (often shortened to `env vars` or `env`). Env vars are easy 
-to change between deploys without changing any code; unlike config files, there is little chance of them being checked 
-into the code repo accidentally; and unlike custom config files, or other config mechanisms such as Java System 
+The twelve-factor app stores config in environment variables (often shortened to `env vars` or `env`). Env vars are easy
+to change between deploys without changing any code; unlike config files, there is little chance of them being checked
+into the code repo accidentally; and unlike custom config files, or other config mechanisms such as Java System
 Properties, they are a language- and OS-agnostic standard.
 
 Config: [config.go](config/config.go)

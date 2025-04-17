@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/evrone/go-clean-template/internal/entity"
-	"github.com/evrone/go-clean-template/internal/usecase"
-	"github.com/evrone/go-clean-template/pkg/rabbitmq/rmq_rpc/server"
+	"github.com/dorozhkoanton/battletoads/internal/entity"
+	"github.com/dorozhkoanton/battletoads/internal/usecase"
+	"github.com/dorozhkoanton/battletoads/pkg/rabbitmq/rmq_rpc/server"
 	amqp "github.com/rabbitmq/amqp091-go"
 )
 

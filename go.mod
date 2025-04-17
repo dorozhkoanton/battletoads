@@ -1,4 +1,4 @@
-module github.com/evrone/go-clean-template
+module github.com/dorozhkoanton/battletoads
 
 go 1.24
 

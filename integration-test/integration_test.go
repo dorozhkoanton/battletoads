@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/evrone/go-clean-template/pkg/rabbitmq/rmq_rpc/client"
+	"github.com/dorozhkoanton/battletoads/pkg/rabbitmq/rmq_rpc/client"
 	"github.com/goccy/go-json"
 )
 
