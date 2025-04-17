@@ -75,7 +75,7 @@ make compose-up-all
 
 Конфигурация: [config.go](config/config.go)
 
-Пример: [.env.example](.env.example)
+Пример: [.env.example](.env.example) (переименуйте `.env.example` в `.env` перед запуском)
 
 [docker-compose.yml](docker-compose.yml) использует переменные `env` для настройки сервисов.
 

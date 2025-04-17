@@ -93,7 +93,7 @@ Check URL's:
 
 設定：[config.go](config/config.go)
 
-例如：[.env.example](.env.example)
+例如：[.env.example](.env.example) (运行前将 `.env.example` 重命名为 `.env`)
 
 [docker-compose.yml](docker-compose.yml) 使用 `env` 變數來配置服務。
 

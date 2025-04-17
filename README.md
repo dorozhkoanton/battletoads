@@ -80,7 +80,7 @@ Properties, they are a language- and OS-agnostic standard.
 
 Config: [config.go](config/config.go)
 
-Example: [.env.example](.env.example)
+Example: [.env.example](.env.example) (rename `.env.example` to `.env` before running)
 
 [docker-compose.yml](docker-compose.yml) uses `env` variables to configure services.
 
