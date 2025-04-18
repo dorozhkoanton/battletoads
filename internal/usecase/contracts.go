@@ -7,7 +7,7 @@ import (
 	"github.com/dorozhkoanton/battletoads/internal/entity"
 )
 
-//go:generate mockgen -source=interfaces.go -destination=./mocks_usecase_test.go -package=usecase_test
+//go:generate mockgen -source=contracts.go -destination=./mocks_usecase_test.go -package=usecase_test
 
 type (
 	// Translation -.
