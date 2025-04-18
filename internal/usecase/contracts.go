@@ -16,3 +16,15 @@ type (
 		History(context.Context) ([]entity.Translation, error)
 	}
 )
+
+type (
+	// IntervalCommand -.
+	IntervalCommand interface {
+		Create(context.Context, entity.IntervalCommand) error
+	}
+
+	// ScheduledCommand -.
+	ScheduledCommand interface {
+		Create(context.Context, entity.ScheduledCommand) error
+	}
+)

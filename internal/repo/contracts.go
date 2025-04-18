@@ -21,3 +21,15 @@ type (
 		Translate(entity.Translation) (entity.Translation, error)
 	}
 )
+
+type (
+	// IntervalCommandRepo -.
+	IntervalCommandRepo interface {
+		Create(context.Context, entity.IntervalCommand) error
+	}
+
+	// ScheduledCommandRepo -.
+	ScheduledCommandRepo interface {
+		Create(context.Context, entity.ScheduledCommand) error
+	}
+)

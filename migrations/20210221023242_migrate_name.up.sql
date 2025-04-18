@@ -1,7 +1,11 @@
-CREATE TABLE IF NOT EXISTS history(
-    id serial PRIMARY KEY,
-    source VARCHAR(255),
-    destination VARCHAR(255),
-    original VARCHAR(255),
-    translation VARCHAR(255)
+CREATE TABLE IF NOT EXISTS scheduled_command (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    time TIMESTAMPTZ NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS interval_command (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    interval INTERVAL NOT NULL
 );

@@ -15,6 +15,100 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
+        "/interval_command/": {
+            "post": {
+                "description": "Create Interval Command",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Interval Command"
+                ],
+                "summary": "Create",
+                "operationId": "create_interval_command",
+                "parameters": [
+                    {
+                        "description": "Set up interval command",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/v1.createIntervalCommandRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/v1.response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/v1.response"
+                        }
+                    }
+                }
+            }
+        },
+        "/scheduled_command/": {
+            "post": {
+                "description": "Create Scheduled Command",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Scheduled Command"
+                ],
+                "summary": "Create",
+                "operationId": "create_scheduled_command",
+                "parameters": [
+                    {
+                        "description": "Set up scheduled command",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/v1.createScheduledCommandRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/v1.response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/v1.response"
+                        }
+                    }
+                }
+            }
+        },
         "/translation/do-translate": {
             "post": {
                 "description": "Translate a text",
@@ -112,6 +206,40 @@ const docTemplate = `{
                 "translation": {
                     "type": "string",
                     "example": "text for translation"
+                }
+            }
+        },
+        "v1.createIntervalCommandRequest": {
+            "type": "object",
+            "required": [
+                "interval",
+                "name"
+            ],
+            "properties": {
+                "interval": {
+                    "type": "string",
+                    "example": "6h30m50s"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "Покормить жабу"
+                }
+            }
+        },
+        "v1.createScheduledCommandRequest": {
+            "type": "object",
+            "required": [
+                "name",
+                "time"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "example": "Покормить жабу"
+                },
+                "time": {
+                    "type": "string",
+                    "example": "2023-10-01T12:00:00Z"
                 }
             }
         },

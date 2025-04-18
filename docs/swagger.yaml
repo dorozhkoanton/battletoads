@@ -15,6 +15,30 @@ definitions:
         example: text for translation
         type: string
     type: object
+  v1.createIntervalCommandRequest:
+    properties:
+      interval:
+        example: 6h30m50s
+        type: string
+      name:
+        example: Покормить жабу
+        type: string
+    required:
+    - interval
+    - name
+    type: object
+  v1.createScheduledCommandRequest:
+    properties:
+      name:
+        example: Покормить жабу
+        type: string
+      time:
+        example: "2023-10-01T12:00:00Z"
+        type: string
+    required:
+    - name
+    - time
+    type: object
   v1.doTranslateRequest:
     properties:
       destination:
@@ -51,6 +75,68 @@ info:
   title: Go Clean Template API
   version: "1.0"
 paths:
+  /interval_command/:
+    post:
+      consumes:
+      - application/json
+      description: Create Interval Command
+      operationId: create_interval_command
+      parameters:
+      - description: Set up interval command
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/v1.createIntervalCommandRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/v1.response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/v1.response'
+      summary: Create
+      tags:
+      - Interval Command
+  /scheduled_command/:
+    post:
+      consumes:
+      - application/json
+      description: Create Scheduled Command
+      operationId: create_scheduled_command
+      parameters:
+      - description: Set up scheduled command
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/v1.createScheduledCommandRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/v1.response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/v1.response'
+      summary: Create
+      tags:
+      - Scheduled Command
   /translation/do-translate:
     post:
       consumes:

@@ -12,6 +12,8 @@ import (
 	v1 "github.com/dorozhkoanton/battletoads/internal/controller/http"
 	"github.com/dorozhkoanton/battletoads/internal/repo/persistent"
 	"github.com/dorozhkoanton/battletoads/internal/repo/webapi"
+	"github.com/dorozhkoanton/battletoads/internal/usecase/interval_command"
+	"github.com/dorozhkoanton/battletoads/internal/usecase/scheduled_command"
 	"github.com/dorozhkoanton/battletoads/internal/usecase/translation"
 	"github.com/dorozhkoanton/battletoads/pkg/httpserver"
 	"github.com/dorozhkoanton/battletoads/pkg/logger"
@@ -32,8 +34,14 @@ func Run(cfg *config.Config) {
 
 	// Use case
 	translationUseCase := translation.New(
-		persistent.New(pg),
+		persistent.NewTranslationRepo(pg),
 		webapi.New(),
+	)
+	intervalCommandUseCase := interval_command.New(
+		persistent.NewIntervalCommandRepo(pg),
+	)
+	scheduledCommandUseCase := scheduled_command.New(
+		persistent.NewScheduledCommandRepo(pg),
 	)
 
 	// RabbitMQ RPC Server
@@ -46,7 +54,7 @@ func Run(cfg *config.Config) {
 
 	// HTTP Server
 	httpServer := httpserver.New(httpserver.Port(cfg.HTTP.Port), httpserver.Prefork(cfg.HTTP.UsePreforkMode))
-	v1.NewRouter(httpServer.App, cfg, l, translationUseCase)
+	v1.NewRouter(httpServer.App, cfg, l, translationUseCase, intervalCommandUseCase, scheduledCommandUseCase)
 
 	// Start servers
 	rmqServer.Start()
