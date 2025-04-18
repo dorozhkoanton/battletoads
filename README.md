@@ -1,6 +1,6 @@
-![Go Clean Template](docs/img/logo.svg)
+![Battletoads](docs/img/logo.svg)
 
-# Go Clean template
+# Battletoads
 
 [🇨🇳 中文](README_CN.md)
 [🇷🇺 RU](README_RU.md)

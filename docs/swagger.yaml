@@ -71,8 +71,8 @@ definitions:
 host: localhost:8080
 info:
   contact: {}
-  description: Using a translation service as an example
-  title: Go Clean Template API
+  description: Automated bot for the game [ToadBot](https://toadbot.info/)
+  title: Battletoads API
   version: "1.0"
 paths:
   /interval_command/:

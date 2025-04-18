@@ -1,6 +1,6 @@
-![Go Clean Template](docs/img/logo.svg)
+![Battletoads](docs/img/logo.svg)
 
-# Go 整洁模板
+# Battletoads
 
 golang服务的整洁架构模板
 

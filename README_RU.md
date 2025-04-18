@@ -1,6 +1,6 @@
-![Go Clean Template](docs/img/logo.svg)
+![Battletoads](docs/img/logo.svg)
 
-# Go Чистая Архитектура
+# Battletoads
 
 Шаблон Чистой Архитектурой для приложений на Golang
 

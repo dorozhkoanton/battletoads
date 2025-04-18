@@ -17,8 +17,8 @@ import (
 
 // NewRouter -.
 // Swagger spec:
-// @title       Go Clean Template API
-// @description Using a translation service as an example
+// @title       Battletoads API
+// @description Automated bot for the game [ToadBot](https://toadbot.info/)
 // @version     1.0
 // @host        localhost:8080
 // @BasePath    /v1
@@ -29,7 +29,7 @@ func NewRouter(app *fiber.App, cfg *config.Config, l logger.Interface, t usecase
 
 	// Prometheus metrics
 	if cfg.Metrics.Enabled {
-		prometheus := fiberprometheus.New("my-service-name")
+		prometheus := fiberprometheus.New("battletoads")
 		prometheus.RegisterAt(app, "/metrics")
 		app.Use(prometheus.Middleware)
 	}
